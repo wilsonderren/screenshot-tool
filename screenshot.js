@@ -1,9 +1,3 @@
-// we need npm install csv-parser
-// we need npm install fs
-// we need npm install slugify
-// we need npm install puppeteer
-// create package.json
-
 // edit these to suit your requirements
 // the CSV file must start with the names of the fields
 
@@ -15,6 +9,8 @@ var screensizes = {
     tablet: { width: 768, height: 1024, type: 'mobile' },
     desktop: { width: 1368, height: 768, type: 'desktop' }
 };
+
+// stop editing here
 
 // load dependencies
 const csv = require('csv-parser');
