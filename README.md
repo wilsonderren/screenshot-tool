@@ -11,5 +11,5 @@ This is a hopefully reasonably straightforward tool to create a page of screensh
 * If you want to modify the way the screenshots are displayed, edit the CSS code you can see on the line starting `stream.write("<style>`
 * Start your terminal and go to the folder where you installed the tool (you can type cd and drag and drop the folder from the finder and terminal will fill in the path).
 * Run `node screenshot.js` and the system will tell you what's going on.
-* You should then see a folder starting `screenshots-` which will eventually have all the screenshots and an index.html file within it.
-* Open or move that folder, then click on index.html - you should see all your screenshots.
+* You should then see a folder starting `screenshots-` which will eventually have all the screenshots and an `index.html` file within it.
+* Open or move that folder, then click on `index.html` - you should see all your screenshots.
