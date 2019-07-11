@@ -20,6 +20,11 @@ const fs = require('fs');
 const slugify = require('slugify');
 const puppeteer = require('puppeteer');
 
+var runtime = new Date().toISOString().slice(0, 19);
+runtime = runtime.replace("T", "-");
+runtime = runtime.replace(/:/g, "-");
+
+
 console.log("Starting to take screenshots now");
 console.log("--------------------------------");
 
@@ -36,14 +41,14 @@ async function getScreenshot(browser_width, browser_height, browser_condition, b
     });
     await page.goto(browser_url);
 
-    await page.screenshot({ path: 'screenshots/' + screenshot_filename + '.png', type: 'png' });
+    await page.screenshot({ path: "screenshots-" + runtime + "/" + screenshot_filename + '.png', type: 'png' });
     await page.close();
     await browser.close();
 }
 
 
-
-var stream = fs.createWriteStream("screenshot.html");
+fs.mkdirSync("screenshots-" + runtime);
+var stream = fs.createWriteStream("screenshots-" + runtime + "/index.html");
 
 
 stream.once('open', function(fd) {
@@ -68,7 +73,7 @@ stream.once('open', function(fd) {
 
 
                 getScreenshot(screensizes[key].width, screensizes[key].height, screensizes[key].type, row.url, screenshot_filename);
-                stream.write("\r\n<div class=\"size\"><h3>" + screensizes[key].width + " &#215; " + screensizes[key].height + "</h3><img src=\"screenshots/" + screenshot_filename + ".png\" /></div>");
+                stream.write("\r\n<div class=\"size\"><h3>" + screensizes[key].width + " &#215; " + screensizes[key].height + "</h3><img src=\"" + screenshot_filename + ".png\" /></div>");
             });
 
 
@@ -79,6 +84,6 @@ stream.once('open', function(fd) {
             stream.write("</body></html>");
             stream.end();
             console.log("--------------------------------");
-            console.log('CSV file successfully processed.\r\nThere should be a folder called screenshots and a HTML file called screenshot.html in this folder.\r\nOpen screenshot.html in a web browser, ideally Firefox Developer Edition.');
+            console.log("CSV file successfully processed.\r\nThere should be a folder called \'screenshots-" + runtime + "\' and a HTML index.html file to view the screenshots in this folder.\r\nOpen index.html in a web browser, ideally Firefox Developer Edition.");
         });
-}); {}
+});
