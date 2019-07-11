@@ -1,0 +1,30 @@
+{
+  "name": "screenshot-tool",
+  "version": "1.0.0",
+  "description": "This tool takes screenshots of a list of URIs supplied as a .csv file using puppeteer",
+  "main": "screenshot.js",
+  "dependencies": {
+    "csv-parser": "^2.3.0",
+    "fs": "^0.0.1-security",
+    "puppeteer": "^1.18.1",
+    "slugify": "^1.3.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node screenshot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilsonderren/screenshot-tool.git"
+  },
+  "keywords": [
+    "screenshot",
+    "puppeteer"
+  ],
+  "author": "Derren Wilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilsonderren/screenshot-tool/issues"
+  },
+  "homepage": "https://github.com/wilsonderren/screenshot-tool#readme"
+}

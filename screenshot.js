@@ -29,8 +29,8 @@ runtime = runtime.replace("T", "-");
 runtime = runtime.replace(/:/g, "-");
 
 
-console.log("Starting to take screenshots now");
-console.log("--------------------------------");
+console.log("Starting to take screenshots now...");
+console.log("-----------------------------------");
 
 // take the screenshots
 async function getScreenshot(browser_width, browser_height, browser_condition, browser_url, screenshot_filename) {
@@ -96,7 +96,7 @@ stream.once('open', function(fd) {
 
             // finish making the html file and let people know it's finished
 
-            console.log("--------------------------------");
+            console.log("-----------------------------------");
             console.log("CSV file successfully processed.\r\nThere should be a folder called \'screenshots-" + runtime + "\' and a HTML index.html file to view the screenshots in this folder.\r\nOpen index.html in a web browser, ideally Firefox Developer Edition.");
         });
 });
