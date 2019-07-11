@@ -2,8 +2,15 @@
 
 This is a hopefully reasonably straightforward tool to create a page of screenshots from a list of URIs. We use it to help up mark student work. We need to check that sites are responsive, so we needed a way of taking multiple screenshots of the same site.
 
-## Installing the tool
+This tool has only been tested on a Mac.
 
+## Installing the tool
+There are probably better ways of doing this but this is way that worked for me. 
+
+* You need to have [node and npm installed on your computer](https://treehouse.github.io/installation-guides/mac/node-mac.html).
+* Download the zip file containing all these files from github. Unzip it and move it to the folder where you want to use the tool.
+* Run `npm install` and the `package.json` file will install the dependencies.
+* Everythings should now be ready to go. 
 
 ## Using the tool
 * Most likely you'll be starting with a list in Excel. What the tool needs is a list of names and complete URIs (e.g. starting `http://` or `https://`). Save this list as a CSV, open it in visual studio code or another text editor, and add a line at the top with `name,url`. You also need to make sure that the file is saved with CRLF line endings (go to the bottom of visual studio code and click on `LF` - it should give you the choice to change this to `CRLF`.
