@@ -1,11 +1,11 @@
 # Create a series of screenshots from a CSV file
 
-This is a hopefully reasonably straightforward tool to create a page of screenshots from a list of URIs. We use it to help up mark student work. We need to check that sites are responsive, so we needed a way of taking multiple screenshots of the same site.
+This is a hopefully reasonably straightforward tool to create a page of screenshots from a list of URIs. We use it to help in the process of marking student work, as we need to see that sites are responsive. This is one way of taking multiple screenshots of the same site (though there is no substitute for actually trying to use sites on a real device).
 
 This tool has only been tested on a Mac. You will need to use the command line - [this is a good intro on how to do that](https://hellowebbooks.com/learn-command-line/) or I can also recommend the [codeacademy tutorial](https://www.codecademy.com/learn/learn-the-command-line).
 
 ## Installing the tool
-There are probably better ways of doing this but this is way that worked for me. 
+There are ~~probably~~ definitely better ways of doing this but this is way that worked for me. 
 
 * You need to have [node and npm installed on your computer](https://treehouse.github.io/installation-guides/mac/node-mac.html).
 * Download the zip file containing all these files from github. Unzip it and move it to the folder where you want to use the tool.
